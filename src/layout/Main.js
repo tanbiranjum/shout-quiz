@@ -4,7 +4,7 @@ import Nav from "../components/Nav/Nav";
 
 const Main = () => {
   return (
-    <div>
+    <div className="px-24">
       <Nav />
       <Outlet />
     </div>
