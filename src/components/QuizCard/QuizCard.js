@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-const QuizCard = ({info}) => {
-  return (
-    <div>
+const QuizCard = ({ info }) => {
+  return <div className="bg-slate-100">
+    {info.question}
+  </div>;
+};
 
-    </div>
-  )
-}
-
-export default QuizCard
+export default QuizCard;
