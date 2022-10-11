@@ -10,7 +10,7 @@ const Nav = () => {
             Shout!
           </h1>
         </Link>
-        <div className="text-xl flex gap-4 text-blue-700 font-semibold justify-center sm:justify-end">
+        <div className="text-xl flex gap-4 text-blue-700 font-semibold justify-center sm:justify-end mt-3 sm:mt-0">
           <NavLink to="/" className="hover:underline bg-blue-700 text-white px-4 py-2 rounded">
             Home
           </NavLink>
