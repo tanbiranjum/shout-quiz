@@ -9,7 +9,7 @@ const Quiz = () => {
       <h1>Quiz</h1>
       {console.log(quizes)}
       {quizes.data.questions.map((quiz) => (
-        <QuizCard key={quiz.id} info={quiz}/>
+        <QuizCard key={quiz.id} info={quiz} />
       ))}
     </div>
   );

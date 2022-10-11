@@ -6,7 +6,6 @@ const Home = () => {
   const quizes = useLoaderData();
   return (
     <div>
-      Home {quizes.length}
       <div className="grid grid-cols-4 gap-6">
         {quizes.data.map((quiz) => (
           <Card key={quiz.id} info={quiz} />

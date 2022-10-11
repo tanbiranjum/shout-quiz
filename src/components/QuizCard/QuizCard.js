@@ -22,7 +22,7 @@ const QuizCard = ({ info }) => {
   return (
     <div className="bg-slate-100 mt-4 py-8">
       <div className="flex justify-between p-6">
-        <div>{parse(`${info.question}`)}</div>
+        <p className="text-xl flex gap-2">Question: {parse(`${info.question}`)}</p>
         <div onClick={handleShowCorrectAnswer}>
           <FaEye className="cursor-pointer" />
         </div>
