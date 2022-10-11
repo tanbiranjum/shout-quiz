@@ -19,15 +19,18 @@ const Blog = () => {
         <p>
           React Context Api provide a way of passing data without having to pass
           props down manually or what we say prop drilling. Components can
-          receive data whenever its needed from React Context Api.
+          receive data whenever its needed from React Context Api. It is like a
+          wrapper or some kind of cloud that wrap around components so when
+          component need value it can directly access from context api.
         </p>
       </div>
       <div className="bg-white p-4 shadow-lg mt-5">
         <h1 className="text-blue-700 text-lg">What is the use of useRef?</h1>
         <p>
           The useRef is a hook that allows to create a direct references to the
-          DOM elements. It is used to store a local mutable value in a
-          components.
+          DOM elements. So that we can access dom element directly. It is used
+          to store a local mutable value in a components. useRef returns a
+          object. useRef doesnot re render component.
         </p>
       </div>
     </div>
