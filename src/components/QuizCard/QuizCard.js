@@ -34,16 +34,16 @@ const QuizCard = ({
   };
 
   return (
-    <div className="border-2 border-blue-700 mt-8 py-8 rounded drop-shadow-lg">
+    <div className=" bg-white mt-8 py-8 rounded drop-shadow-xl">
       <div className="flex justify-between p-6">
-        <p className="text-xl flex gap-2 text-blue-700 font-semibold">
-          Question: {parse(`${info.question}`)}
+        <p className="text-xl !text-blue-700 font-semibold">
+          {parse(`${info.question}`)}
         </p>
         <div onClick={handleShowCorrectAnswer}>
           <FaEye className="cursor-pointer text-blue-700 text-xl" />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 py-2 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-2 px-4">
         {info.options.map((question, id) => (
           <button
             key={id}

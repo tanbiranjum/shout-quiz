@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./layout/Main";
 import Blog from "./pages/Blog/Blog";
+import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
 import Quiz from "./pages/Quiz/Quiz";
 import Stats from "./pages/Stats/Stats";
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             `https://openapi.programming-hero.com/api/quiz/${params.id}`
           );
         },
+      },
+      {
+        path: "*",
+        element: <Error />,
       },
     ],
   },

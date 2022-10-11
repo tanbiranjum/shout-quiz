@@ -4,14 +4,22 @@ import { Link, NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <div className="drop-shadow-md">
-      <div className="container flex justify-between py-6">
+      <div className="container sm:flex sm:justify-between text-center sm:text-left py-6">
         <Link to="/">
-          <h1 className="text-blue-700 font-extrabold text-4xl italic">Shout!</h1>
+          <h1 className="text-blue-700 font-extrabold text-4xl italic">
+            Shout!
+          </h1>
         </Link>
-        <div className="text-xl flex gap-6">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/stats">Stats</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
+        <div className="text-xl flex gap-6 text-blue-700 font-semibold justify-center sm:justify-end">
+          <NavLink to="/" className="hover:underline">
+            Home
+          </NavLink>
+          <NavLink to="/stats" className="hover:underline">
+            Stats
+          </NavLink>
+          <NavLink to="/blog" className="hover:underline">
+            Blog
+          </NavLink>
         </div>
       </div>
     </div>
