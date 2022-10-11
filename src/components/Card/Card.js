@@ -8,6 +8,7 @@ const Card = ({ info }) => {
       <img src={info.logo} alt="logo" className="w-1/2" />
       <div className="flex-1">
         <p className="text-blue-700 text-xl font-bold">{info.name}</p>
+        <p className="text-blue-900 font-semibold">Question: {info.total}</p>
         <Link
           to={`quiz/${info.id}`}
           className="flex justify-between items-center text-white bg-blue-900 p-2 rounded self-auto mt-2"

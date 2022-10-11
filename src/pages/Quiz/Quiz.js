@@ -13,10 +13,11 @@ const Quiz = () => {
         <p>Right Answer: {rightCount}</p>
         <p>Wrong Answer: {wrongCount}</p>
       </div>
-      {quizes.data.questions.map((quiz) => (
+      {quizes.data.questions.map((quiz, index) => (
         <QuizCard
           key={quiz.id}
           info={quiz}
+          index={index}
           wrongCount={wrongCount}
           setWrongCount={setWrongCount}
           rightCount={rightCount}

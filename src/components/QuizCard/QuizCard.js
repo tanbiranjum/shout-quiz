@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import parse from "html-react-parser";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const QuizCard = ({
   info,
@@ -8,6 +10,7 @@ const QuizCard = ({
   setRightCount,
   wrongCount,
   setWrongCount,
+  index,
 }) => {
   const [selected, setSelected] = useState();
 
@@ -22,13 +25,15 @@ const QuizCard = ({
   };
 
   const handleShowCorrectAnswer = () => {
-    alert(info.correctAnswer);
+    toast.success(info.correctAnswer);
   };
 
   const handleCount = (question) => {
     if (question === info.correctAnswer) {
+      toast.success("Woh! You got it right!");
       setRightCount(rightCount + 1);
     } else {
+      toast.error("Wrong Answer!");
       setWrongCount(wrongCount + 1);
     }
   };
@@ -36,9 +41,14 @@ const QuizCard = ({
   return (
     <div className=" bg-white mt-8 py-8 rounded drop-shadow-xl">
       <div className="flex justify-between p-6">
-        <p className="text-xl !text-blue-700 font-semibold">
-          {parse(`${info.question}`)}
-        </p>
+        <div>
+          <p className="text-xl text-blue-900 font-bold mb-2">
+            Question: {index + 1}
+          </p>
+          <p className="text-xl !text-blue-700 font-semibold">
+            {parse(`${info.question}`)}
+          </p>
+        </div>
         <div onClick={handleShowCorrectAnswer}>
           <FaEye className="cursor-pointer text-blue-700 text-xl" />
         </div>
@@ -50,7 +60,7 @@ const QuizCard = ({
             className={`border border-blue-700 rounded p-4 cursor-pointer ${
               (selected && handleSelect(question)) || "bg-white"
             } ${!selected && "hover:bg-blue-700 hover:text-white"}`}
-            onClick={(e) => {
+            onClick={() => {
               setSelected(question);
               handleCount(question);
             }}
