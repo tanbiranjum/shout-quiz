@@ -6,7 +6,7 @@ const Nav = () => {
     <div className="drop-shadow-md">
       <div className="container flex justify-between py-6">
         <Link to="/">
-          <h1 className="text-blue-700 font-extrabold text-4xl">Shout!</h1>
+          <h1 className="text-blue-700 font-extrabold text-4xl italic">Shout!</h1>
         </Link>
         <div className="text-xl flex gap-6">
           <NavLink to="/">Home</NavLink>

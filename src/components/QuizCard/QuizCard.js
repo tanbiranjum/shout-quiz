@@ -20,18 +20,18 @@ const QuizCard = ({ info }) => {
   };
 
   return (
-    <div className="bg-slate-100 mt-4 py-8">
+    <div className="border-2 border-blue-700 mt-8 py-8 rounded drop-shadow-lg">
       <div className="flex justify-between p-6">
-        <p className="text-xl flex gap-2">Question: {parse(`${info.question}`)}</p>
+        <p className="text-xl flex gap-2 text-blue-700 font-semibold">Question: {parse(`${info.question}`)}</p>
         <div onClick={handleShowCorrectAnswer}>
-          <FaEye className="cursor-pointer" />
+          <FaEye className="cursor-pointer text-blue-700 text-xl" />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 p-2">
+      <div className="grid grid-cols-2 gap-4 py-2 px-4">
         {info.options.map((question, id) => (
           <button
             key={id}
-            className={`border rounded p-4 cursor-pointer ${
+            className={`border border-blue-700 rounded p-4 cursor-pointer ${
               (selected && handleSelect(question)) || "bg-white"
             } ${!selected && "hover:bg-blue-700 hover:text-white"}`}
             onClick={(e) => {
