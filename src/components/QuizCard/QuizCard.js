@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import parse from "html-react-parser";
 
 const QuizCard = ({ info }) => {
@@ -21,8 +21,8 @@ const QuizCard = ({ info }) => {
         {info.options.map((question, id) => (
           <button
             key={id}
-            className={`bg-white p-4 cursor-pointer ${
-              selected && handleSelect(question)
+            className={`border rounded p-4 cursor-pointer ${
+              (selected && handleSelect(question)) || "bg-white"
             }`}
             onClick={(e) => {
               setSelected(question);
